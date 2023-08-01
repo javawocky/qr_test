@@ -3,7 +3,9 @@ import 'package:qr_trade/qrcodeform.dart';
 import 'resetpin.dart';
 
 class Details extends StatefulWidget {
-  const Details(Map<String, String> map, {Key? key}) : super(key: key);
+  final Map<String, String> nameValuePair;
+
+  const Details(this.nameValuePair, {Key? key}) : super(key: key);
 
   @override
   State<Details> createState() => _DetailsState();
@@ -21,10 +23,13 @@ class _DetailsState extends State<Details> {
 
   @override
   Widget build(BuildContext context) {
+    String name = widget.nameValuePair['name'] ??
+        ''; // Get the 'name' value from the nameValuePair
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("Your Details"),
+        title: Text("Your Details $name"), // Concatenate the name to the title
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),

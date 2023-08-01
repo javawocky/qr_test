@@ -45,7 +45,11 @@ class _LoginState extends State<Login> {
                   if (_usernameController.text == 'Bob') {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Details()),
+                      MaterialPageRoute(
+                          builder: (context) => Details(
+                                Map<String, String>.from(
+                                    {"name": _usernameController.text}),
+                              )),
                     );
                   } else {
                     // Login failes
