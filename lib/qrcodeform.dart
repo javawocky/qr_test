@@ -25,11 +25,11 @@ class _QRCodeFormState extends State<QRCodeForm> {
               children: [
                 Expanded(
                   child: QrImageView(
-                    data: "bazinga",
+                    data: "Bazinga",
                     version: QrVersions.auto,
                     eyeStyle: const QrEyeStyle(
-                      eyeShape: QrEyeShape.square,
-                      color: Colors.black,
+                      eyeShape: QrEyeShape.circle,
+                      color: Color.fromARGB(255, 232, 38, 38),
                     ),
                     size: 300,
                   ),

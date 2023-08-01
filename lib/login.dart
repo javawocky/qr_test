@@ -20,8 +20,9 @@ class _LoginState extends State<Login> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: 70),
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(
@@ -37,7 +38,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(18.0),
               child: ElevatedButton(
                 child: const Text('Login'),
                 onPressed: () {
